@@ -4,7 +4,7 @@ interface AuthSocialButtonProps {
   onClick: () => void;
 }
 
-//returns command 
+//returns command , not this that 
 
 const AuthSocialButton: React.FC<AuthSocialButtonProps> = ({
   icon: Icon,

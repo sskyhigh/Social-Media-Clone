@@ -5,6 +5,7 @@ import { FieldValues, useForm, SubmitHandler } from "react-hook-form";
 import { BsGithub, BsGoogle } from "react-icons/bs";
 import Button from "@/app/components/Button";
 import AuthSocialButton from "./AuthSocialButton";
+import axios from "axios";
 
 import Input from "@/app/components/inputs/input";
 
@@ -38,7 +39,7 @@ const AuthForm = () => {
     setIsLoading(true);
 
     if (variant === "REGISTER") {
-      // AXIOS register
+      axios.post("/api/register", data);
     }
     if (variant === "LOGIN") {
       // nextAuth Signin
